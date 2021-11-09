@@ -1,0 +1,49 @@
+.block-restaurants
+{
+    background-color: #F5F5F5;
+    padding: 35px 20px 20px 20px;
+    
+}
+
+.rest-prev
+{
+    height: 250px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px #D6D6D6;
+
+    img 
+    {
+        height: 180px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.info-rest 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 
+    {
+        margin: 10px 0 0 10px;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+    
+    p 
+    {
+        margin: 0 0 0 10px;
+        font-size: 1rem;
+        font-weight: 380;
+    }
+
+    i 
+    {
+        margin: 0 15px 0 0;
+        font-size: 1.2rem;
+    }
+        
+}

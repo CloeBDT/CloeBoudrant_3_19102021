@@ -1,0 +1,35 @@
+.block-steps 
+{
+    padding: 30px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    h2
+    {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    i 
+    {
+        color: gray;
+    }
+}
+
+.steps_fonct
+{
+    @include steps;
+    
+    &--purple
+    {
+        @include steps (#F4E6FD);
+
+        i 
+        {
+            color: $colour-primary;
+        }
+    }
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "Projet 3 OC - OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloeBDT/CloeBoudrant_3_19102021.git"
+  },
+  "author": "Cloé Boudrant",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/CloeBDT/CloeBoudrant_3_19102021/issues"
+  },
+  "homepage": "https://github.com/CloeBDT/CloeBoudrant_3_19102021#readme"
+}

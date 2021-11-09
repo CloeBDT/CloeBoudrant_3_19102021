@@ -1,0 +1,27 @@
+//Mixins
+
+@mixin btn 
+{
+    border-radius: 50px;
+    background-color: $colour-primary;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    color: white;
+    padding: 14px 21px;
+    border: none;
+    box-shadow: 4px 4px 3px #e2e2e2;
+    font-size: 1rem;
+}
+
+@mixin steps($colour: #F5F5F5)
+{
+    height: 70px;
+    border: none;
+    background-color: $colour;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #e2e2e2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}

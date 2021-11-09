@@ -1,0 +1,45 @@
+.map
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 115px 0 115px;
+    background-color:#E2E2E2;
+    border-top: 3px #D8D8D8 solid;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.icon-map
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explorer
+{
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 40px 0 50px 0;
+    
+    h1 
+    {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: 0 50px 0 50px;
+    }
+    p 
+    {
+        font-size: 1.1rem;
+        font-weight: 350;
+        padding: 0 20px 10px 20px;
+    }
+}
+
+:-webkit-any(article, aside, nav, section) h1 
+{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
