@@ -12,7 +12,7 @@
     font-size: 1rem;
 }
 
-@mixin steps($colour: #F5F5F5)
+@mixin steps($colour: #f6f6f6)
 {
     height: 70px;
     border: none;
@@ -24,4 +24,16 @@
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
+}
+
+@mixin info-nouv
+{
+    width: 80px;
+    height: 20px;
+    background-color: #99e2d0;
+    color: #008766;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center;
 }
