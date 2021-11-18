@@ -2,6 +2,14 @@
 {
     background-color: #f6f6f6;
     padding: 35px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    h2 
+    {
+        margin-bottom: 5px;
+    }
     
 }
 
@@ -11,11 +19,7 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: 6px 6px 20px #D6D6D6;
-
-    &>p 
-    {
-        @include info-nouv;
-    }
+    position: relative;
 
     img 
     {
@@ -25,6 +29,11 @@
     }
 }
 
+.nvx
+{
+    @include info-nouv;
+}
+
 
 
 .info-rest 
@@ -32,6 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
     h3 
     {
@@ -51,6 +61,9 @@
     {
         margin: 0 15px 0 0;
         font-size: 1.2rem;
-    }
-        
+        &:hover
+        {
+            background: linear-gradient($colour-secondary, $colour-primary);
+        }
+    }   
 }
