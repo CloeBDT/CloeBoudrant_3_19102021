@@ -6,7 +6,6 @@ footer
     font-size: 0.9rem;
     font-weight: 400;
       
-
     *
     {
         margin: 0 0 7px 0;
@@ -15,21 +14,20 @@ footer
     h1
     {
         font-family: $text-logo;
-        font-size: 1rem;
+        font-size: map-get($dimensions, size-line);
         font-weight: 100;
         margin-bottom: 13px;
 
         a 
         {
             font-family: $text-logo;
-            font-size: 1rem;
+            font-size: map-get($dimensions, size-line);
             font-weight: 100;
         }
     }
 
     div 
     {
-
         a 
         {
             display: flex;

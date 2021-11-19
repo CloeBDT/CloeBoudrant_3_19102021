@@ -1,4 +1,4 @@
-.block-restaurants
+.block-rest
 {
     background-color: #f6f6f6;
     padding: 35px 20px 20px 20px;
@@ -10,7 +10,6 @@
     {
         margin-bottom: 5px;
     }
-    
 }
 
 .rest-prev
@@ -27,43 +26,43 @@
         width: 100%;
         border-radius: 20px 20px 0 0;
     }
-}
 
-.nvx
-{
-    @include info-nouv;
-}
-
-
-
-.info-rest 
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
-    h3 
+    .info-nvx
     {
-        margin: 10px 0 0 10px;
-        font-size: 1rem;
-        font-weight: 800;
-    }
-    
-    p 
-    {
-        margin: 0 0 0 10px;
-        font-size: 1rem;
-        font-weight: 380;
+        @include nvx;
     }
 
-    i 
+    &__name 
     {
-        margin: 0 15px 0 0;
-        font-size: 1.2rem;
-        &:hover
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 
         {
-            background: linear-gradient($colour-secondary, $colour-primary);
+            margin: 10px 0 0 10px;
+            font-size: map-get($dimensions, size-line);
+            font-weight: 800;
         }
-    }   
+    
+        p 
+        {
+            margin: 0 0 0 10px;
+            font-size: map-get($dimensions, size-line);
+            font-weight: 380;
+        }
+
+        i 
+        {
+            margin: 0 15px 0 0;
+            font-size: 1.2rem;
+            &:hover
+            {
+                background: linear-gradient($colour-secondary, $colour-primary);
+            }
+        }   
+    }
 }
+
+
+

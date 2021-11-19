@@ -1,4 +1,4 @@
-.block-steps 
+.steps 
 {
     padding: 30px 20px 60px 20px;
     display: flex;
@@ -17,13 +17,13 @@
     }
 }
 
-.steps_fonct
+.steps-fonct
 {
-    @include steps;
+    @include step;
     
-    &--purple
+    &--last
     {
-        @include steps (#f5edff);
+        @include step (#f5edff);
 
         i 
         {

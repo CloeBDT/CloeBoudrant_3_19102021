@@ -93,8 +93,7 @@ footer div a {
   font-weight: 500;
   color: #353535;
 }
-
-.icon-map {
+.map__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,14 +122,14 @@ footer div a {
   margin-block-end: 0;
 }
 
-.block-restaurants {
+.block-rest {
   background-color: #f6f6f6;
   padding: 35px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
-.block-restaurants h2 {
+.block-rest h2 {
   margin-bottom: 5px;
 }
 
@@ -146,8 +145,7 @@ footer div a {
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
-
-.nvx {
+.rest-prev .info-nvx {
   width: 80px;
   height: 20px;
   background-color: #99e2d0;
@@ -160,45 +158,44 @@ footer div a {
   left: 230px;
   top: 15px;
 }
-
-.info-rest {
+.rest-prev__name {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.info-rest h3 {
+.rest-prev__name h3 {
   margin: 10px 0 0 10px;
   font-size: 1rem;
   font-weight: 800;
 }
-.info-rest p {
+.rest-prev__name p {
   margin: 0 0 0 10px;
   font-size: 1rem;
   font-weight: 380;
 }
-.info-rest i {
+.rest-prev__name i {
   margin: 0 15px 0 0;
   font-size: 1.2rem;
 }
-.info-rest i:hover {
+.rest-prev__name i:hover {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
-.block-steps {
+.steps {
   padding: 30px 20px 60px 20px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
-.block-steps h2 {
+.steps h2 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.block-steps i {
+.steps i {
   color: #7e7e7e;
 }
 
-.steps_fonct {
+.steps-fonct {
   height: 70px;
   border: none;
   background-color: #f6f6f6;
@@ -210,7 +207,7 @@ footer div a {
   font-size: 1.1rem;
   font-weight: 600;
 }
-.steps_fonct div {
+.steps-fonct div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +220,7 @@ footer div a {
   font-size: 0.9rem;
   font-weight: 400;
 }
-.steps_fonct--purple {
+.steps-fonct--last {
   height: 70px;
   border: none;
   background-color: #f5edff;
@@ -235,7 +232,7 @@ footer div a {
   font-size: 1.1rem;
   font-weight: 600;
 }
-.steps_fonct--purple div {
+.steps-fonct--last div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,79 +245,83 @@ footer div a {
   font-size: 0.9rem;
   font-weight: 400;
 }
-.steps_fonct--purple i {
+.steps-fonct--last i {
   color: #9356DC;
 }
 
-.block-menu {
+.menu {
   margin-bottom: -50px;
 }
-.block-menu img {
+.menu img {
   width: 100%;
 }
-.block-menu > div {
+.menu > div {
   background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
   position: relative;
   top: -50px;
   width: 100%;
 }
-.block-menu .title_rest {
+.menu__heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.block-menu h1 {
+.menu__heading h1 {
   margin: 35px 0 0 20px;
   font-family: "Shrikhand", sans-serif;
   font-size: 1.7rem;
   font-weight: 450;
 }
-.block-menu i {
+.menu__heading i {
   margin: 35px 40px 0 0;
   font-size: 1.5rem;
 }
-.block-menu .button_order {
+.menu__meal h2 {
+  margin: 40px 0 20px 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom-color: #99E2D0;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  width: 38px;
+}
+.menu__button {
   display: flex;
   justify-content: center;
 }
-.block-menu button {
+.menu__button button {
   width: 170px;
   display: block;
   margin: 40px 0 70px 0;
 }
 
-.meal h2 {
-  margin: 40px 0 20px 20px;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.block_title_price {
+.dish-presentation {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 5px 5px 10px #e2e2e2;
   margin: 0 20px 5px 20px;
   padding: 5px;
 }
-.block_title_price div {
+.dish-presentation div {
   display: flex;
   justify-content: space-between;
 }
-.block_title_price h3 {
+.dish-presentation h3 {
   margin: 5px 0 2px 5px;
   font-size: 1.1rem;
 }
-.block_title_price p {
+.dish-presentation p {
   margin: 2px 0 5px 5px;
   font-size: 0.9rem;
   font-weight: 350;
 }
-.block_title_price p:nth-child(2) {
+.dish-presentation p:nth-child(2) {
   font-weight: 600;
   margin-right: 10px;
 }
-.block_title_price i {
+.dish-presentation i {
   display: none;
 }
 

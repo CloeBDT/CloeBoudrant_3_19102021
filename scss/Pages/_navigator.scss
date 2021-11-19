@@ -4,16 +4,16 @@
     justify-content: space-between;
     padding: 0 115px 0 115px;
     background: linear-gradient(to top, #eaeaea 92%, #cfcfcf);
-    font-size: 1rem;
+    font-size: map-get($dimensions, size-line);
     font-weight: 500;
     color: #353535;
-}
 
-.icon-map
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &__icon
+    {   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .explorer

@@ -10,6 +10,6 @@
 
 h2 
 {
-    font-size: 1.4rem;
-    font-weight: 750;
+    font-size: map-get($dimensions, size-block-title);
+    font-weight: map-get($dimensions, weight);
 }
