@@ -1,14 +1,30 @@
 .steps 
-{
-    padding: 30px 20px 60px 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+{   
+
+    &-flex 
+    {
+        padding: 30px 20px 60px 25px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        @include tablet 
+        {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        @include desktop 
+        {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
 
     h2
     {
         margin-bottom: 0;
-        padding-bottom: 0;
+        padding: 30px 0 0 20px;
     }
 
     i 
@@ -20,7 +36,7 @@
 .steps-fonct
 {
     @include step;
-    
+
     &--last
     {
         @include step (#f5edff);

@@ -32,12 +32,18 @@ button {
   border: none;
   box-shadow: 4px 4px 3px #e2e2e2;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 header {
   position: relative;
   width: 100%;
   height: 50px;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100px;
+  }
 }
 header span {
   position: absolute;
@@ -50,6 +56,14 @@ header > div {
   align-items: center;
   height: inherit;
 }
+header img {
+  height: 30px;
+}
+@media screen and (min-width: 1024px) {
+  header img {
+    height: 40px;
+  }
+}
 
 footer {
   background-color: #353535;
@@ -57,9 +71,12 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   font-weight: 400;
+  line-height: 30px;
 }
-footer * {
-  margin: 0 0 7px 0;
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 20px 40px;
+  }
 }
 footer h1 {
   font-family: "Shrikhand", sans-serif;
@@ -72,10 +89,19 @@ footer h1 a {
   font-size: 1rem;
   font-weight: 100;
 }
+footer div {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  height: 30px;
+}
 footer div a {
   display: flex;
   align-items: center;
   margin-bottom: 0;
+}
+footer p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .fa-utensils, .fa-hands-helping {
@@ -93,10 +119,30 @@ footer div a {
   font-weight: 500;
   color: #353535;
 }
+@media screen and (min-width: 768px) {
+  .map {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .map {
+    justify-content: center;
+  }
+}
 .map__icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .map__icon {
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .map__icon {
+    padding-right: 10px;
+  }
 }
 
 .explorer {
@@ -124,13 +170,23 @@ footer div a {
 
 .block-rest {
   background-color: #f6f6f6;
-  padding: 35px 20px 20px 20px;
+}
+.block-rest > div {
+  padding: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
+@media screen and (min-width: 1024px) {
+  .block-rest > div {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+}
 .block-rest h2 {
-  margin-bottom: 5px;
+  padding: 60px 0 0 20px;
+  margin: 0;
 }
 
 .rest-prev {
@@ -139,6 +195,11 @@ footer div a {
   border-radius: 20px;
   box-shadow: 6px 6px 20px #D6D6D6;
   position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .rest-prev {
+    width: 24%;
+  }
 }
 .rest-prev img {
   height: 180px;
@@ -155,7 +216,7 @@ footer div a {
   border-radius: 3px;
   text-align: center;
   position: absolute;
-  left: 230px;
+  right: 20px;
   top: 15px;
 }
 .rest-prev__name {
@@ -181,15 +242,27 @@ footer div a {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
-.steps {
-  padding: 30px 20px 60px 20px;
+.steps-flex {
+  padding: 30px 20px 60px 25px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
+@media screen and (min-width: 768px) {
+  .steps-flex {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps-flex {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .steps h2 {
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 30px 0 0 20px;
 }
 .steps i {
   color: #7e7e7e;
@@ -201,11 +274,26 @@ footer div a {
   background-color: #f6f6f6;
   border-radius: 25px;
   box-shadow: 5px 5px 10px #e2e2e2;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 5fr;
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct {
+    height: 90px;
+    width: 30%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps-fonct {
+    height: 200px;
+    width: 30%;
+  }
 }
 .steps-fonct div {
   display: flex;
@@ -216,9 +304,21 @@ footer div a {
   height: 1.6rem;
   width: 1.6rem;
   color: white;
-  margin: -45px;
   font-size: 0.9rem;
   font-weight: 400;
+  margin: -12px;
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: -10px 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct > p {
+    padding-right: 20%;
+  }
 }
 .steps-fonct--last {
   height: 70px;
@@ -226,11 +326,26 @@ footer div a {
   background-color: #f5edff;
   border-radius: 25px;
   box-shadow: 5px 5px 10px #e2e2e2;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 5fr;
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct--last {
+    height: 90px;
+    width: 30%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps-fonct--last {
+    height: 200px;
+    width: 30%;
+  }
 }
 .steps-fonct--last div {
   display: flex;
@@ -241,9 +356,21 @@ footer div a {
   height: 1.6rem;
   width: 1.6rem;
   color: white;
-  margin: -45px;
   font-size: 0.9rem;
   font-weight: 400;
+  margin: -12px;
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct--last div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: -10px 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .steps-fonct--last > p {
+    padding-right: 20%;
+  }
 }
 .steps-fonct--last i {
   color: #9356DC;
@@ -254,6 +381,7 @@ footer div a {
 }
 .menu img {
   width: 100%;
+  height: 260px;
 }
 .menu > div {
   background-color: #f6f6f6;
@@ -295,6 +423,7 @@ footer div a {
   width: 170px;
   display: block;
   margin: 40px 0 70px 0;
+  cursor: pointer;
 }
 
 .dish-presentation {

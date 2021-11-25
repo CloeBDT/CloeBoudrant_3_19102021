@@ -10,6 +10,7 @@
     border: none;
     box-shadow: 4px 4px 3px #e2e2e2;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 @mixin step($colour: #f6f6f6)
@@ -19,11 +20,26 @@
     background-color: $colour;
     border-radius: 25px;
     box-shadow: 5px 5px 10px #e2e2e2;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 5fr;
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
+
+    @include tablet 
+    {
+        height: 90px;
+        width: 30%;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 2fr;
+        justify-items: center;
+    }
+    
+    @include desktop
+    {
+        height: 200px;
+        width: 30%;
+    }
 
     div
     {
@@ -35,9 +51,24 @@
         height: 1.6rem;
         width: 1.6rem;
         color:white;
-        margin:-45px;
         font-size: 0.9rem;
         font-weight: 400;
+        margin: -12px;
+
+        @include tablet
+        {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin: -10px 0 0 0;
+        }
+    }
+
+    &>p 
+    {
+        @include tablet
+        {
+            padding-right: 20%;
+        }
     }
 }
 
@@ -52,7 +83,7 @@
     border-radius: 3px;
     text-align: center;
     position: absolute;
-    left: 230px;
+    right: 20px;
     top: 15px;
 }
 
@@ -62,4 +93,28 @@
     border-radius: 15px;
     box-shadow: 5px 5px 10px #e2e2e2;
     margin: 0 20px 5px 20px;
+}
+
+@mixin tablet
+{
+    @media screen and (min-width: map-get($breakpoints, tablet))
+    {
+        @content;
+    }
+}
+
+@mixin desktop
+{
+    @media screen and (min-width: map-get($breakpoints, desktop))
+    {
+        @content;
+    }
+}
+
+@mixin wide 
+{
+    @media screen and (min-width: map-get($breakpoints, wide))
+    {
+        @content;
+    }
 }
