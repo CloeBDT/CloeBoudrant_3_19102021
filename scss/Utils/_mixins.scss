@@ -37,7 +37,7 @@
     
     @include desktop
     {
-        height: 100px;
+        height: 80px;
         width: 30%;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr 2fr;
@@ -67,7 +67,7 @@
 
         @include desktop
         {
-            margin: -30px 0 0 0;
+            margin: -20px 0 0 0;
             height: 2rem;
             width: 2rem;
             font-size: 1.1rem;
@@ -109,6 +109,17 @@
     border-radius: 15px;
     box-shadow: 5px 5px 10px #e2e2e2;
     margin: 0 20px 5px 20px;
+    padding: 5px;
+
+    @include tablet 
+    {
+        padding: 5px 20px 5px 20px;
+    }
+
+    @include desktop
+    {
+        margin: 0 0 15px 0;
+    }
 }
 
 @mixin tablet
