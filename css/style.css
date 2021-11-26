@@ -13,6 +13,12 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 
 a {
   color: inherit;
@@ -177,6 +183,14 @@ footer p {
   flex-direction: column;
   row-gap: 15px;
 }
+@media screen and (min-width: 768px) {
+  .block-rest > div {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .block-rest > div {
     flex-direction: row;
@@ -195,6 +209,11 @@ footer p {
   border-radius: 20px;
   box-shadow: 6px 6px 20px #D6D6D6;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .rest-prev {
+    width: 49%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .rest-prev {
@@ -291,8 +310,11 @@ footer p {
 }
 @media screen and (min-width: 1024px) {
   .steps-fonct {
-    height: 200px;
+    height: 100px;
     width: 30%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
   }
 }
 .steps-fonct div {
@@ -315,9 +337,22 @@ footer p {
     margin: -10px 0 0 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .steps-fonct div {
+    margin: -30px 0 0 0;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .steps-fonct > p {
     padding-right: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps-fonct > p {
+    padding-right: 0;
   }
 }
 .steps-fonct--last {
@@ -343,8 +378,11 @@ footer p {
 }
 @media screen and (min-width: 1024px) {
   .steps-fonct--last {
-    height: 200px;
+    height: 100px;
     width: 30%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
   }
 }
 .steps-fonct--last div {
@@ -367,9 +405,22 @@ footer p {
     margin: -10px 0 0 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .steps-fonct--last div {
+    margin: -30px 0 0 0;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .steps-fonct--last > p {
     padding-right: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps-fonct--last > p {
+    padding-right: 0;
   }
 }
 .steps-fonct--last i {
@@ -383,12 +434,21 @@ footer p {
   width: 100%;
   height: 260px;
 }
+@media screen and (min-width: 768px) {
+  .menu img {
+    height: 400px;
+  }
+}
 .menu > div {
   background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
   position: relative;
   top: -50px;
-  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu > div {
+    padding: 0 20px 0 20px;
+  }
 }
 .menu__heading {
   display: flex;
@@ -431,7 +491,7 @@ footer p {
   border-radius: 15px;
   box-shadow: 5px 5px 10px #e2e2e2;
   margin: 0 20px 5px 20px;
-  padding: 5px;
+  padding: 5px 20px 5px 20px;
 }
 .dish-presentation div {
   display: flex;

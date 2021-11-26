@@ -9,6 +9,14 @@
         flex-direction: column;
         row-gap: 15px;
 
+        @include tablet 
+        {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+
         @include desktop
         {
             flex-direction: row;
@@ -31,6 +39,11 @@
     border-radius: 20px;
     box-shadow: 6px 6px 20px #D6D6D6;
     position: relative;
+
+    @include tablet 
+    {
+        width: 49%;
+    }
 
     @include desktop
     {

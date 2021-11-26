@@ -2,6 +2,12 @@ body
 {
     margin: 0;
     padding: 0;
+
+    @include wide 
+    {
+        max-width: 1440px;
+        margin: auto;
+    }
 }
 
 a
