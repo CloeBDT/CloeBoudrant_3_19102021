@@ -36,16 +36,6 @@
 .steps-fonct
 {
     @include step;
-
-    &--last
-    {
-        @include step (#f5edff);
-
-        i 
-        {
-            color: $colour-primary;
-        }
-    }
 }
 
 

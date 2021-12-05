@@ -8,7 +8,8 @@
     color: white;
     padding: 14px 21px;
     border: none;
-    box-shadow: 4px 4px 3px #e2e2e2;
+    box-shadow: 0 6px 6px #e2e2e2;
+    transition: all 300ms;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -25,6 +26,17 @@
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
+
+    &:hover
+    {
+        background-color: #f5edff;
+        transition: all .5s;
+        i 
+        {
+            color: $colour-primary;
+            transition: all .6s;
+        }
+    }
 
     @include tablet 
     {

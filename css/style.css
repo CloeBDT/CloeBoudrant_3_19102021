@@ -12,6 +12,7 @@ h2 {
 body {
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 @media screen and (min-width: 1440px) {
   body {
@@ -36,9 +37,14 @@ button {
   color: white;
   padding: 14px 21px;
   border: none;
-  box-shadow: 4px 4px 3px #e2e2e2;
+  box-shadow: 0 6px 6px #e2e2e2;
+  transition: all 300ms;
   font-size: 1rem;
   cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0 8px 8px #c9c9c9;
 }
 
 header {
@@ -243,12 +249,36 @@ footer p {
   font-size: 1rem;
   font-weight: 380;
 }
-.rest-prev__name i {
-  margin: 0 15px 0 0;
-  font-size: 1.2rem;
+
+.heart {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  height: 25px;
+  width: 25px;
 }
-.rest-prev__name i:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+.heart:hover .heart__start {
+  opacity: 0;
+}
+.heart:hover .heart__end {
+  opacity: 1;
+  transform: scale(1);
+}
+.heart__start {
+  transition: all 0.5s ease-in-out;
+}
+.heart__end {
+  transform-origin: bottom;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart .fa-heart {
+  position: absolute;
+  font-size: 25px;
 }
 
 .steps-flex {
@@ -288,6 +318,14 @@ footer p {
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
+}
+.steps-fonct:hover {
+  background-color: #f5edff;
+  transition: all 0.5s;
+}
+.steps-fonct:hover i {
+  color: #9356DC;
+  transition: all 0.6s;
 }
 @media screen and (min-width: 768px) {
   .steps-fonct {
@@ -345,77 +383,6 @@ footer p {
     padding-right: 0;
   }
 }
-.steps-fonct--last {
-  height: 70px;
-  border: none;
-  background-color: #f5edff;
-  border-radius: 25px;
-  box-shadow: 5px 5px 10px #e2e2e2;
-  display: grid;
-  grid-template-columns: 0.8fr 0.8fr 5fr;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .steps-fonct--last {
-    height: 90px;
-    width: 30%;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 2fr;
-    justify-items: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .steps-fonct--last {
-    height: 80px;
-    width: 30%;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 2fr;
-    justify-items: center;
-  }
-}
-.steps-fonct--last div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  background-color: #9356DC;
-  height: 1.6rem;
-  width: 1.6rem;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin: -12px;
-}
-@media screen and (min-width: 768px) {
-  .steps-fonct--last div {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin: -10px 0 0 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .steps-fonct--last div {
-    margin: -20px 0 0 0;
-    height: 2rem;
-    width: 2rem;
-    font-size: 1.1rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .steps-fonct--last > p {
-    padding-right: 20%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .steps-fonct--last > p {
-    padding-right: 0;
-  }
-}
-.steps-fonct--last i {
-  color: #9356DC;
-}
 
 .menu {
   margin-bottom: -50px;
@@ -456,9 +423,12 @@ footer p {
   font-size: 1.7rem;
   font-weight: 450;
 }
-.menu__heading i {
+.menu__heading div {
   margin: 35px 40px 0 0;
   font-size: 1.5rem;
+  bottom: 0;
+  right: 4px;
+  position: initial;
 }
 @media screen and (min-width: 1024px) {
   .menu__flex {

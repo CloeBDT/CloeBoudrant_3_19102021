@@ -80,18 +80,49 @@
             margin: 0 0 0 10px;
             font-size: map-get($dimensions, size-line);
             font-weight: 380;
-        }
-
-        i 
-        {
-            margin: 0 15px 0 0;
-            font-size: 1.2rem;
-            &:hover
-            {
-                background: linear-gradient($colour-secondary, $colour-primary);
-            }
-        }   
+        }  
     }
+}
+
+.heart
+{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    height: 25px;
+    width: 25px;
+
+    &:hover .heart__start
+    {
+         opacity: 0;
+    }
+
+    &:hover .heart__end
+    {   
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__start
+    {
+        transition: all .5s ease-in-out;
+    }
+
+    &__end
+    {
+        transform-origin: bottom;
+        opacity:  0;
+        transform: scale(0);
+        transition: all .5s ease-in-out;
+        background: linear-gradient($colour-primary, $colour-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .fa-heart{
+        position: absolute;
+        font-size: 25px;
+      }
 }
 
 

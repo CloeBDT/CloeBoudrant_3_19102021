@@ -1,4 +1,10 @@
 button
 {
     @include btn;
+
+    &:hover 
+    {
+        background-image: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
+        box-shadow: 0 8px 8px darken(#e2e2e2, 10%);
+    }
 }
