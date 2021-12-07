@@ -117,11 +117,14 @@
 
 @mixin dish-price
 {
+    height: 55px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 5px 5px 10px #e2e2e2;
     margin: 0 20px 5px 20px;
     padding: 5px;
+    overflow: hidden;
+    position: relative;
 
     @include tablet 
     {
@@ -132,6 +135,22 @@
     {
         margin: 0 0 15px 0;
     }
+}
+
+@mixin checking 
+{
+    background-color: $colour-tertiary;
+    color: #fff;
+    height: 65px;
+    width: 65px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -70px;
+    transition: all .5s;
 }
 
 @mixin tablet

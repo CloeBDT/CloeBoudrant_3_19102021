@@ -1,0 +1,56 @@
+//LOADING SPINNER
+
+.loader
+{
+    border: 8px solid $colour-tertiary;
+    border-top: 8px solid $colour-primary;
+    border-bottom: 8px solid $colour-secondary;
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+    animation: spin 1800ms ease-in-out forwards;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.page 
+{
+    opacity: 0;
+    animation: page 1s 2s both;
+}
+
+@keyframes spin 
+{
+    0% 
+    {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes page 
+{
+    from 
+    {
+        opacity: 0;
+    }
+    to 
+    {
+        opacity: 1;
+    }
+}

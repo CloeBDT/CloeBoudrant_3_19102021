@@ -47,6 +47,48 @@ button:hover {
   box-shadow: 0 8px 8px #c9c9c9;
 }
 
+.loader {
+  border: 8px solid #99E2D0;
+  border-top: 8px solid #9356DC;
+  border-bottom: 8px solid #FF79DA;
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  animation: spin 1800ms ease-in-out forwards;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  opacity: 0;
+  animation: page 1s 2s both;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
   position: relative;
   width: 100%;
@@ -463,11 +505,14 @@ footer p {
 }
 
 .dish-presentation {
+  height: 55px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 5px 5px 10px #e2e2e2;
   margin: 0 20px 5px 20px;
   padding: 5px;
+  overflow: hidden;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .dish-presentation {
@@ -479,6 +524,15 @@ footer p {
     margin: 0 0 15px 0;
   }
 }
+.dish-presentation:hover span {
+  right: 0;
+}
+.dish-presentation:hover i {
+  transform: rotate(0deg);
+}
+.dish-presentation__overflow {
+  text-overflow: ellipsis;
+}
 .dish-presentation div {
   display: flex;
   justify-content: space-between;
@@ -486,18 +540,37 @@ footer p {
 .dish-presentation h3 {
   margin: 5px 0 2px 5px;
   font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-presentation p {
   margin: 2px 0 5px 5px;
   font-size: 0.9rem;
   font-weight: 350;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-presentation p:nth-child(2) {
   font-weight: 600;
   margin-right: 10px;
 }
+.dish-presentation span {
+  background-color: #99E2D0;
+  color: #fff;
+  height: 65px;
+  width: 65px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: -70px;
+  transition: all 0.5s;
+}
 .dish-presentation i {
-  display: none;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

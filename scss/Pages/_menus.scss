@@ -104,6 +104,24 @@
 {
     @include dish-price;
 
+    &:hover 
+    {
+        span 
+        {
+            right: 0; 
+        }
+
+        i
+        {
+            transform: rotate(0deg);
+        }
+    }
+    
+    &__overflow
+    {
+        text-overflow: ellipsis;
+    }
+
     div 
     {
         display: flex;
@@ -114,6 +132,8 @@
     {
         margin: 5px 0 2px 5px;
         font-size: 1.1rem;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     p 
@@ -121,6 +141,8 @@
         margin: 2px 0 5px 5px;
         font-size: 0.9rem;
         font-weight: 350;
+        overflow: hidden;
+        white-space: nowrap;
 
         &:nth-child(2)
         {
@@ -129,8 +151,14 @@
         }
     }
 
-    i 
+    span 
     {
-        display: none;
+       @include checking;
+    }
+
+    i
+    {
+        transform: rotate(-360deg);
+        transition: transform 500ms ease-in-out;
     }
 }
