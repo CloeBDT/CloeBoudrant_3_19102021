@@ -103,6 +103,41 @@
 .dish-presentation
 {
     @include dish-price;
+    
+    opacity: 0;
+
+    @keyframes SlideFromBottom 
+    {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100%{
+            opacity:1;
+            transform: translateY(0);
+        }
+    }
+
+    &.dish-presentation1
+    {
+        animation: SlideFromBottom 300ms ease-out 500ms forwards;
+    }
+
+    &.dish-presentation2
+    {
+        animation: SlideFromBottom 600ms ease-out 600ms forwards;
+    }
+
+    &.dish-presentation3
+    {
+        animation: SlideFromBottom 600ms ease-out 700ms forwards;
+    }
+
+    &.dish-presentation4
+    {
+        animation: SlideFromBottom 600ms ease-out 800ms forwards;
+    }
+    
 
     &:hover 
     {
@@ -115,7 +150,20 @@
         {
             transform: rotate(0deg);
         }
+
+        .dish-presentation__left
+        {
+            position: relative;
+            right: 50px;
+            transition: right .5s ease-in-out;
+        }
     }
+
+    &__left
+        {
+            position: relative;
+            right: 0;
+        }
     
     &__overflow
     {

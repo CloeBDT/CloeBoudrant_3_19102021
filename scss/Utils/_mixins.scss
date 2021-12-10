@@ -150,7 +150,7 @@
     position: absolute;
     top: 0;
     right: -70px;
-    transition: all .5s;
+    transition: all .5s ease-in-out;
 }
 
 @mixin tablet

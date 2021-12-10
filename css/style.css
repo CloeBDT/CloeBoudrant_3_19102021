@@ -317,6 +317,8 @@ footer p {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 .heart .fa-heart {
   position: absolute;
@@ -513,6 +515,7 @@ footer p {
   padding: 5px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   .dish-presentation {
@@ -524,11 +527,42 @@ footer p {
     margin: 0 0 15px 0;
   }
 }
+@keyframes SlideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dish-presentation.dish-presentation1 {
+  animation: SlideFromBottom 300ms ease-out 500ms forwards;
+}
+.dish-presentation.dish-presentation2 {
+  animation: SlideFromBottom 600ms ease-out 600ms forwards;
+}
+.dish-presentation.dish-presentation3 {
+  animation: SlideFromBottom 600ms ease-out 700ms forwards;
+}
+.dish-presentation.dish-presentation4 {
+  animation: SlideFromBottom 600ms ease-out 800ms forwards;
+}
 .dish-presentation:hover span {
   right: 0;
 }
 .dish-presentation:hover i {
   transform: rotate(0deg);
+}
+.dish-presentation:hover .dish-presentation__left {
+  position: relative;
+  right: 50px;
+  transition: right 0.5s ease-in-out;
+}
+.dish-presentation__left {
+  position: relative;
+  right: 0;
 }
 .dish-presentation__overflow {
   text-overflow: ellipsis;
@@ -566,7 +600,7 @@ footer p {
   position: absolute;
   top: 0;
   right: -70px;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .dish-presentation i {
   transform: rotate(-360deg);
