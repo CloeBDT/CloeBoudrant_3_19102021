@@ -144,13 +144,13 @@
     height: 65px;
     width: 65px;
     border-radius: 0 15px 15px 0;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
     right: -70px;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 @mixin tablet

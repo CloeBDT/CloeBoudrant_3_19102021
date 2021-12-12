@@ -23,7 +23,7 @@
 
         <main class="page">
             <!--HEADER-->
-            <header>
+            <header id="header">
                 <div>
                     <img src="images/ohmyfood@2x.svg" alt="Logo OhMyFood"/>
                 </div>
@@ -35,7 +35,9 @@
                     <div class="map__icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <p>Paris, Belleville<p>
+                    <form>
+                        <input class="lieu" type="search" name="recherche par lieu" value="Paris, Belleville">
+                    </form>
                 </div>
                 <div class="explorer">
                     <h1>Réservez le menu qui vous convient</h1>
@@ -78,7 +80,7 @@
                 <div>
                     <div class="rest-prev">
                         <a href="Page4.html">
-                            <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Exemple de plat du restauant La palette du goût"/>
+                            <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.webp" alt="Exemple de plat du restauant La palette du goût"/>
                             <span class="info-nvx">Nouveau</span>
                             <div class="rest-prev__name">
                                 <div>
@@ -94,7 +96,7 @@
                     </div>
                     <div class="rest-prev">
                         <a href="Page3.html">
-                            <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Exemple de plat du restaurant La note enchantée"/>
+                            <img src="images/stil-u2Lp8tXIcjw-unsplash.webp" alt="Exemple de plat du restaurant La note enchantée"/>
                             <span class="info-nvx">Nouveau</span>
                             <div class="rest-prev__name">
                                 <div>
@@ -110,7 +112,7 @@
                     </div>
                     <div class="rest-prev">
                         <a href="Page2.html">
-                            <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Exemple de plat du restaurant À la française"/>
+                            <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.webp" alt="Exemple de plat du restaurant À la française"/>
                             <div class="rest-prev__name">
                                 <div>
                                     <h3>À la française</h3>
@@ -125,7 +127,7 @@
                     </div>
                     <div class="rest-prev">
                         <a href="Page5.html">
-                            <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Exemple de plat du restaurant Le délice des sens"/>
+                            <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.webp" alt="Exemple de plat du restaurant Le délice des sens"/>
                             <div class="rest-prev__name">
                                 <div>
                                     <h3>Le délice des sens</h3>
@@ -143,7 +145,7 @@
 
             <!--FOOTER-->
             <footer>
-                <h2><a href="#">ohmyfood</a></h2>
+                <h2><a href="#header">ohmyfood</a></h2>
                 <div>
                     <a href="#">
                         <i class="fas fa-utensils"></i>
@@ -157,7 +159,7 @@
                     </a>
                 </div>
                 <p><a href="#">Mentions légales</a></p>
-                <p><a href="#">Contact</a></p>
+                <p><a href="mailto:contact@ohmyfood.com">Contact</a></p>
             </footer>   
         </main>   
     </body>

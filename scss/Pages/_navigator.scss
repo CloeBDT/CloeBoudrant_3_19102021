@@ -2,11 +2,12 @@
 {
     display: flex;
     justify-content: center;
-    padding: 0 115px 0 115px;
+    align-items: center;
     background: linear-gradient(to top, #eaeaea 92%, #cfcfcf);
     font-size: map-get($dimensions, size-line);
     font-weight: 500;
     color: #353535;
+    height: 50px;
 
     @include tablet
     {
@@ -23,6 +24,15 @@
         display: flex;
         align-items: center;
         padding-right: 10px;
+    }
+
+    .lieu
+    {
+        border: none;
+        background: transparent;
+        font-size: map-get($dimensions, size-line);
+        font-weight: 500;
+        width: 150px;
     }
 }
 

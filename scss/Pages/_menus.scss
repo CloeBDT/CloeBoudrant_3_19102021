@@ -100,24 +100,26 @@
     }
 }
 
+@keyframes SlideFromBottom 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%
+    {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
 .dish-presentation
 {
     @include dish-price;
-    
     opacity: 0;
-
-    @keyframes SlideFromBottom 
-    {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100%{
-            opacity:1;
-            transform: translateY(0);
-        }
-    }
-
+    padding-right: 0;
+    transition: padding-right .4s ease-in-out;
     &.dish-presentation1
     {
         animation: SlideFromBottom 300ms ease-out 500ms forwards;
@@ -138,9 +140,11 @@
         animation: SlideFromBottom 600ms ease-out 800ms forwards;
     }
     
-
     &:hover 
     {
+        padding-right: 65px;
+        transition: padding-right .4s ease-in-out;
+
         span 
         {
             right: 0; 
@@ -150,38 +154,29 @@
         {
             transform: rotate(0deg);
         }
-
-        .dish-presentation__left
-        {
-            position: relative;
-            right: 50px;
-            transition: right .5s ease-in-out;
-        }
     }
 
-    &__left
-        {
-            position: relative;
-            right: 0;
-        }
-    
-    &__overflow
-    {
-        text-overflow: ellipsis;
-    }
-
-    div 
+    &>div
     {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
+        width: auto;
+        overflow: hidden;
+
+        div 
+        {
+            display: inline-block;
+            width: fit-content;
+            overflow: hidden;
+        }
     }
 
     h3 
     {
         margin: 5px 0 2px 5px;
         font-size: 1.1rem;
-        overflow: hidden;
-        white-space: nowrap;
     }
 
     p 
@@ -189,24 +184,31 @@
         margin: 2px 0 5px 5px;
         font-size: 0.9rem;
         font-weight: 350;
-        overflow: hidden;
-        white-space: nowrap;
-
-        &:nth-child(2)
-        {
-            font-weight: 600;
-            margin-right: 10px;
-        }
     }
 
-    span 
+    &__overflow
+    {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    .price
+    {
+        display: flex;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+
+    &>span 
     {
        @include checking;
     }
 
     i
     {
+        font-size: 1.4em;
         transform: rotate(-360deg);
-        transition: transform 500ms ease-in-out;
+        transition: transform .5s ease-in;
     }
 }
